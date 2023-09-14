@@ -1,0 +1,88 @@
+.app-header {
+  color: white;
+  text-align: center;
+  padding: 30px 30px;
+  width: calc(100vw - 50px);
+  background-color: rgb(32, 32, 124);
+  margin: 0px;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+html {
+  overflow: hidden;
+}
+
+.table-container {
+  max-height: calc(100vh - 300px);
+  overflow: auto;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-color: #363799;
+  color: white;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  height: 30px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #dddddd;
+
+  &:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+
+  &:last-of-type {
+    border-bottom: 2px solid #363799;
+  }
+}
+
+table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.transaction-header {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 10px 30px;
+  overflow: auto;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.transaction-container {
+  width: 97%;
+  display: flex;
+  margin: 0px auto 100px auto;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 426px) {
+  .transaction-header {
+    display: flex;
+    flex-direction: column;
+  }
+}
