@@ -3,6 +3,7 @@ import Transactions from "./components/Transactions";
 import TransactionHeader from "./components/Transactions/Header";
 import "./stylesheets/application.scss";
 import AppHeader from "./components/AppHeader";
+import BounceLoader from "react-spinners/BounceLoader";
 
 const App = () => {
   const [transactions, setTransactions] = useState([]);
@@ -44,7 +45,9 @@ const App = () => {
     <>
       <AppHeader />
       {isLoading ? (
-        <h1>Loading</h1>
+        <div className="spinner-container">
+          <BounceLoader color="#20207C" />
+        </div>
       ) : (
         <div className="transaction-container">
           <TransactionHeader currentBalance={transactions[0]?.balance} />

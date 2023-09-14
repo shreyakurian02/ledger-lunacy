@@ -80,6 +80,14 @@ table tbody tr.active-row {
   flex-direction: column;
 }
 
+.spinner-container {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 426px) {
   .transaction-header {
     display: flex;
